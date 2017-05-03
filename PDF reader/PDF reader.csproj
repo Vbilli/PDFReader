@@ -71,12 +71,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </Compile>
     <Compile Include="PDFAnlayer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -84,6 +78,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ScreenSaver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScreenSaver.Designer.cs">
+      <DependentUpon>ScreenSaver.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -96,10 +96,14 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Resource1.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScreenSaver.resx">
+      <DependentUpon>ScreenSaver.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">
@@ -132,14 +136,16 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\Downloads\_SCREEN_CAPTURE\_SCREEN_CAPTURE\_SCREEN_CAPTURE.csproj">
+    <None Include="Resources\ok.png" />
+    <None Include="Resources\close.png" />
+    <Content Include="Resources\Delete.jpg" />
+    <None Include="Resources\DeletePicture.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ScreenSaver\_SCREEN_CAPTURE\_SCREEN_CAPTURE.csproj">
       <Project>{9786f3b5-866b-4b93-93a5-ac2379c92657}</Project>
       <Name>_SCREEN_CAPTURE</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Resources\Delete.jpg" />
-    <None Include="Resources\DeletePicture.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
